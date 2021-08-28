@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="stylesheet" type="text/css" href="about.css">
 </header>
 
 <body>
@@ -50,12 +51,96 @@
         <div class="row belownav">
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
-                <h1 class="text-primary">Final Project</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.o</p>
+                <h1 class="text-primary"><u><strong>Final Project</strong></u></h1>
+                <p>In this section, I will be documenting the process of my final project for the module. 
+                    For this project, I wanted to create something that would meet the requirements of this project and also help benefit me with my gaming experience. 
+                    As such, i decided to create an Osu! 2-mechanical switch keypad. However, many of such products already exist out in the market, therefore i wanted to add
+                    in another fucntion to it, which is to add a clicks per second counter and have it display on a lcd screen above the keypad.</p>
+                    <br>
+                    <br>
+                <h3><u>Bill of materials</u></h3>
+                <br>
+                <table class="text-center" style="width:35%">
+                    <tr>
+                        <th>Item:</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <td>Arduino Pro Micro</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Cherry MX Speedsilver Mechanical Switches</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>I2C LCD Screen</td>
+                        <td>1</td>
+
+                    </tr>
+                    <tr>
+                        <td>White Acrylic Sheet</td>
+                        <td>1</td>
+
+                    </tr>
+                </table>
+                <br>
+                <h3><u>Prototyping Phase</u></h3>
+                <p>One of the earlier problems that was identified was how to place the LCD screen in a position so that it would not affect the wiring of the switches and the LCD screen itself, 
+                    while giving ample space for the switch to be placed in a comfortable spot.</p>
+                <p>The solution thought up for this was to design the keypad in "levels" of acrylic plating so that if more space were needed, another plate can just be added in between.</p>
+                <p>Another problem was how to position the Arduino Pro Micro so that the connection can be easily accessed and that the wiring will have sufficient space to be in. 
+                    This also ensures that the connection from the switches and LCD screen to the Pro Micro will be secure.</p>
+                <p>To fix this, I decided to 3D print an Arduino Pro Micro housing that will be lodged in between the base plate and the other acrylic platings. 
+                    The housing is basically a very thick plating with a support that extends out of one side. 
+                    The Pro Micro will be placed on the suppoprt and there would be a hole in the plating so that the wire can be plugged in. 
+                    The support would be located under the mechanical switches to give more space for the LCD screen wiring to go through 
+                    while saving more time in connecting the switches with shorter wires.</p>
+                <p>One more other problem that I thought of later was that how to hold up the LCD screen so that it would be floating above the Pro Micro. 
+                    I needed the LCD to be floating as it gives much more space for the wiring and so that it would make my life easier when soldering the wires to both the LCD 
+                    and the Pro Micro.
+                </p>
+                <p>To solve this, I wanted to put smaller acrylic plating around the LCD screen to separate out the space for the switches and the screen. The smaller platings also have 
+                    a hole that would be cut out to be friction fit for the LCD screen to be placed in, and have smaller screw holes around the corners so that we can screw in the LCD screen in place
+                    to the top acrylic plating.
+                </p>
+                <h3><u>3D Modelling</u></h3>
+                <p>Once I had a clearer idea, I started to 3D model out the parts in Autodesk Fusion 360. </p>
+                <p>A glimpse of how the final 3D model looks like.</p>
+                <iframe src="https://ichat2020.autodesk360.com/shares/public/SH919a0QTf3c32634dcfeab8b9633300705d?mode=embed" width=100% height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+                <p>After much consideration, I decided to 3D print the Arduino Pro Micro housing and laser cut all of the other acrylic plates, as well as the base plating.</p>
+                <h3><u>3D Printing</u></h3>
+                <br>
+                <p>As stated earlier, only the Arduino Pro Micro housing would be 3D printed. </p>
+                <table class="text-center" style="width:35%">
+                    <tr>
+                        <th colspan="2">Settings used for the print</th>
+                    </tr>
+                    <tr>
+                        <td>Layer Height</td>
+                        <td>0.2mm</td>
+                    </tr>
+                    <tr>
+                        <td>Infill</td>
+                        <td>15%</td>
+                    </tr>
+                    <tr>
+                        <td>Print Speed</td>
+                        <td>80.0mm/s</td>
+                    </tr>
+                </table>
+                <br>
+                <p><img src="images/finalproj2.JPG" alt="Base Box" width=100%></p>
+                <p>Result of the print</p>
+                <p>The first print was almost perfect, the Pro Micro could fit into the mount perfectly and the print was of good quality. 
+                    However, there was some warping on one corner of the print, which causes the edges to be uneven. 
+                    Fortunately, it was small enough that a little sanding did the job.</p>
+                <p><img src="images/finalproj3.JPG" alt="Base Box" width=100%></p>
+                <p>Above is an image of the Pro Micro mounted onto the print.</p>
+                <h3><u>Laser cutting</u></h3>
+
+
+                
             </div>
             <div class="col-lg-2"></div>
         </div>
